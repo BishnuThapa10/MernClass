@@ -1,9 +1,8 @@
 import { createBrowserRouter } from "react-router"
 import RootLayOut from "./components/RootLayOut"
 import { RouterProvider } from "react-router-dom"
-import EmployeesList from "./features/employees/EmployeesList"
-import AddEmployee from "./features/employees/AddEmployee"
-import UpdateEmployee from "./features/employees/UpdateEmployee"
+import ToDoList from "./features/todo/ToDoList"
+import ToDoEdit from "./features/todo/ToDoEdit"
 
 export default function App() {
 
@@ -14,16 +13,13 @@ export default function App() {
       children:[
         {
           index:true,
-          element: <EmployeesList/>
+          element: <ToDoList/>
         },
         {
-          path:'add-employee',
-          element: <AddEmployee/>
+          path:'update-task/:id',
+          element: <ToDoEdit/>
         },
-        {
-          path:'update-employee/:id',
-          element: <UpdateEmployee/>
-        },
+        
       ]
     }
   ])
