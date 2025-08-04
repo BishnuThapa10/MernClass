@@ -61,7 +61,7 @@ export default function ToDoList() {
                         className={`w-full p-1 shadow-md ${task.done ? `opacity-50` :``}`} >
                         <div className="flex items-center justify-between w-full">
                             <div className="flex items-center gap-2 ml-4 shrink-0">
-                    <button className={` ${task.done ? `text-gray-400` : `text-green-500  hover:text-green-700`}`}>
+                    <button className={` ${task.done ? ` text-green-500 hover:text-green-700` : ` text-gray-400 `}`}>
                     <i class="fa-regular fa-circle-check"/>
                     </button>
                     <span
