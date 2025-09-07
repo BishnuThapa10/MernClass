@@ -9,8 +9,8 @@ import ProductUpdateForm from "./features/admin/ProductUpdateForm.jsx";
 import Home from "./features/home/Home.jsx";
 import ProductDetail from "./features/product/ProductDetail.jsx";
 import CartPage from "./features/cart/CartPage.jsx";
-import UserDetail from "./features/profile/userDetail.jsx";
-import UserUpdateForm from "./features/profile/userUpdateForm.jsx";
+import UserDetail from "./features/profile/UserDetail.jsx";
+import UserUpdateForm from "./features/profile/UserUpdateForm.jsx";
 import AuthRoute from "./components/AuthRoute.jsx";
 import SearchPage from "./features/search/SearchPage.jsx";
 
