@@ -16,7 +16,7 @@ export default function SearchPage() {
 
       <SearchInput setSearchParams={setSearchParams} />
      {/* Products Grid */}
-           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+           {data.data.length === 0 ? <h1 className="text-2xl mt-1"> No Search Result</h1> :<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
              {data.data && data.data.map(({ _id, title, image, price, description, rating }) => {
                return <Card key={_id} className="mt-6 ">
                  <CardHeader color="blue-gray" className="relative h:48 sm:h-56 p-0">
@@ -52,7 +52,7 @@ export default function SearchPage() {
                </Card>
      
              })}
-           </div>
+           </div>}
     </div>
   )
 }
