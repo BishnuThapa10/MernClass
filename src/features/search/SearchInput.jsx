@@ -31,7 +31,7 @@ export default function SearchInput({ isNav, setSearchParams }) {
       >
         {({ handleSubmit, handleChange, values, errors, touched }) => (
           <form onSubmit={handleSubmit}>
-            <div className="w-72">
+            <div className="w-full max-w-xs sm:max-w-sm md:max-w-md">
               <Input
                 onChange={handleChange}
                 name="search"

@@ -33,7 +33,7 @@ export default function Header() {
         <Typography
           as="a"
           href="#"
-          className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
+          className="mr-2 md:mr-4  ml-2 cursor-pointer py-1.5 font-medium text-xs md:text-base "
         >
           Material Tailwind
         </Typography>

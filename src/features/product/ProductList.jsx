@@ -39,10 +39,10 @@ export default function ProductList() {
 
 
       {/* Products Grid */}
-      <div className="grid grid-cols-4 gap-4 p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
         {data.data && data.data.map(({ _id, title, image, price, description, rating }) => {
           return <Card key={_id} className="mt-6 ">
-            <CardHeader color="blue-gray" className="relative h-56 p-0">
+            <CardHeader color="blue-gray" className="relative h:48 sm:h-56 p-0">
               <img
                 src={`${baseUrl}/${image}`}
                 className="h-full w-full object-cover"
@@ -51,24 +51,24 @@ export default function ProductList() {
             </CardHeader>
             <CardBody>
               <div className="flex justify-between">
-                <Typography variant="h5" color="blue-gray" className="mb-2">
+                <Typography variant="h6" color="blue-gray" className="mb-2 line-clamp-1">
                   {title}
                 </Typography>
-                <p>Rs.{price}</p>
+                <p className="text-sm font-semibold">Rs.{price}</p>
               </div>
               {/* Half star support */}
-              <Rating style={{ maxWidth: 120 }} readOnly value={rating} precision={0.5} transition="zoom"
+              <Rating style={{ maxWidth: 110 }} readOnly value={rating} precision={0.5} transition="zoom"
                 itemStyles={{
                   itemShapes: RoundedStar, // or "thin", "rounded", "star"
                   activeFillColor: "#facc15", // yellow-400
                   inactiveFillColor: "#e5e7eb" // gray-200
                 }} />
-              <p className="line-clamp-3">
+              <p className="line-clamp-2 text-sm mt-1 text-gray-600">
                 {description}
               </p>
             </CardBody>
             <CardFooter className="pt-0">
-              <Button size="md" color="blue"
+              <Button size="sm" color="blue" fullWidth
                 onClick={() => nav(`/product/${_id}`)}
               >View Detail</Button>
             </CardFooter>
@@ -78,7 +78,7 @@ export default function ProductList() {
       </div>
 
       {/* Pagination */}
-      <div className="flex justify-center items-center gap-2 mt-6">
+      <div className="flex flex-wrap justify-center items-center gap-2 mt-6">
         <Button onClick={() => setSearchParams({ page: Number(page) - 1, sort })}
           disabled={page === 1}
           className="btn bg-blue-500 text-white px-3 py-1 text-[10px]  rounded-md">Prev</Button>
@@ -95,7 +95,7 @@ export default function ProductList() {
         </Button>
 
         {/* Show ... if current page > 3 */}
-        {page > 3 && <span className="px-2">...</span>}
+        {page > 3 && <span className="px-1 sm:px-2">...</span>}
 
         {/* Show nearby pages */}
         {Array.from({ length: data.totalPage }, (_, i) => i + 1)
@@ -112,7 +112,7 @@ export default function ProductList() {
           ))}
 
         {/* Show ... if current page is far from last */}
-        {page < data.totalPage - 2 && <span className="px-2">...</span>}
+        {page < data.totalPage - 2 && <span className="px-1 sm:px-2">...</span>}
 
         {/* Always show last page */}
         <Button
