@@ -14,12 +14,12 @@ export const loginUser = async (req, res) => {
     if (!checkPass) return res.status(400).json({ messsage: 'Invalid credentials' });
     const token = jwt.sign({ id: isExist._id, role: isExist.role }, 'secret');
 
-    // res.cookie('jwt', token, {
-    //   httpOnly: true,
-    //   maxAge: 24 * 60 * 60 * 1000,
-    //   sameSite: 'none',
-    //   secure: true
-    // });
+    res.cookie('jwt', token, {
+      httpOnly: true,
+      maxAge: 24 * 60 * 60 * 1000,
+      sameSite: 'none',
+      secure: true
+    });
 
     return res.status(200).json({
       token,
