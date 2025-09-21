@@ -1,8 +1,10 @@
 {
   "appId": "com.yourname.todo_paw",
   "appName": "Todo Paw",
-  "webDir": "out",
+  "webDir": "public",
+  "bundledWebRuntime": false,
   "server": {
-    "androidScheme": "https"
+     "url": "https://todo-paw.vercel.app",
+    "cleartext": true
   }
 }
