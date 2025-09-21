@@ -1,0 +1,10 @@
+{
+  "appId": "com.yourname.todopaw",
+  "appName": "Todo Paw",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}

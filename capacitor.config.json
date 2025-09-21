@@ -1,0 +1,8 @@
+{
+  "appId": "com.yourname.todo_paw",
+  "appName": "Todo Paw",
+  "webDir": "out",
+  "server": {
+    "androidScheme": "https"
+  }
+}

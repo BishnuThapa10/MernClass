@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Todo Paw</string>
+    <string name="title_activity_main">Todo Paw</string>
+    <string name="package_name">com.yourname.todo_paw</string>
+    <string name="custom_url_scheme">com.yourname.todo_paw</string>
+</resources>
