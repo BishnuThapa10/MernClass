@@ -28,7 +28,7 @@ export default function AddTask() {
       >
         {({ handleChange, handleSubmit, values, errors, touched }) => (
           <div>
-            <h1 className="text-center mb-4 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
+            <h1 className="text-center mb-4 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-red-600">
               To-Do List
             </h1>
 

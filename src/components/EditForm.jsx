@@ -38,7 +38,7 @@ export default function EditForm({ task }) {
       >
         {({ handleChange, handleSubmit, values, errors, touched, setFieldValue }) => (
           <div className=" w-fit h-fit bg-white flex flex-col rounded-lg shadow-md p-6 max-h-fit">
-            <h1 className="text-center mb-4 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Edit Task</h1>
+            <h1 className="text-center mb-4 text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-red-600">Edit Task</h1>
 
 
             <form onSubmit={handleSubmit}
