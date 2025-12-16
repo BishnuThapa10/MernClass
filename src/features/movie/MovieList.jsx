@@ -1,13 +1,15 @@
 import { Card, CardBody, Chip, Progress, Typography } from "@material-tailwind/react"
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar"
 import "react-circular-progressbar/dist/styles.css";
+import { useNavigate } from "react-router";
 
 export default function MovieList({movies}) {
+  const nav = useNavigate();
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 py-2 px-4">
 
       {movies.map((movie) =>{
-        return <Card key={movie.id} className=" shadow-md">
+        return <Card key={movie.id} onClick={() => nav(`/details/${movie.id}`)} className=" shadow-md">
           <div className="relative">
       <img
         src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}

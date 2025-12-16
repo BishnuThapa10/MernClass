@@ -7,6 +7,7 @@ import MovieSearch from './features/movie/MovieSearch'
 import PopularMovie from './features/movie/PopularMovie'
 import TopRatedMovie from './features/movie/TopRatedMovie'
 import UpcomingMovie from './features/movie/UpcomingMovie'
+import MovieDetails from './features/movie/MovieDetails.jsx'
 
 export default function App() {
 
@@ -38,6 +39,11 @@ export default function App() {
          {
           path:'upcoming-movie',
           element: <UpcomingMovie/>
+        },
+
+        {
+          path:'details/:id',
+          element: <MovieDetails/>
         },
       ]
     }
